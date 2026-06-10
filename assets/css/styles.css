@@ -1,0 +1,260 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE THEME
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #070b14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents unwanted horizontal shifting */
+}
+
+/* ==========================================================================
+   2. FIXED TOP CORNER NAVIGATION BAR
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(5, 8, 15, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #6ec1ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #6ec1ff; /* Highlight color matching the theme */
+}
+
+/* ==========================================================================
+   3. LANDING HERO & STORY PANELS (index.html)
+   ========================================================================== */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    margin-top: 80px;
+    background: linear-gradient(135deg, rgba(13, 20, 38, 0.6) 0%, rgba(7, 11, 20, 1) 100%);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #8b949e;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #6ec1ff;
+    color: #070b14;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.hero-button:hover {
+    background: #52a6e6;
+}
+
+.story-section {
+    padding: 60px;
+    max-width: 900px;
+}
+
+.story-text h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.story-text p {
+    color: #8b949e;
+}
+
+.preview-section {
+    display: flex;
+    gap: 20px;
+    padding: 0 60px 60px 60px;
+}
+
+.preview-card {
+    flex: 1;
+    background: rgba(13, 20, 38, 0.4);
+    border: 1px solid rgba(110, 193, 255, 0.1);
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.preview-card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.preview-card p {
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   4. SINGLE COLUMN VISUALISATIONS LAYOUT (visualisations.html)
+   ========================================================================== */
+.dashboard-page {
+    padding: 120px 40px 60px 40px;
+    max-width: 1000px; /* Centers and matches container constraint */
+    margin: 0 auto;
+}
+
+.dashboard-intro {
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+}
+
+.dashboard-intro h2, .dashboard-intro h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.dashboard-intro p {
+    color: #8b949e;
+    font-size: 1.1rem;
+}
+
+/* Stacks all charts cleanly into a single vertical column column */
+.charts-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 40px; /* Spacing between charts as you scroll down */
+    width: 100%;
+}
+
+.chart-card {
+    width: 100%;
+    background: rgba(13, 20, 38, 0.4);
+    border: 1px solid rgba(110, 193, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.chart-card h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 12px;
+}
+
+.chart-display {
+    width: 100%;
+    height: 450px; /* Gave the charts a little extra height room for column layout */
+    background: rgba(5, 8, 15, 0.6);
+    border-radius: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   5. APPENDIX GLOSSARY DATA SYSTEM (sources.html)
+   ========================================================================== */
+.glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: rgba(13, 20, 38, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.glossary-table th, 
+.glossary-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glossary-table th {
+    background: rgba(110, 193, 255, 0.08);
+    color: #6ec1ff;
+    font-weight: 600;
+}
+
+.glossary-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* ==========================================================================
+   6. D3 RENDERING LAYER (Sankey Paths & Tooltips)
+   ========================================================================== */
+.sankey-node rect {
+    fill-opacity: 0.9;
+    shape-rendering: crispEdges;
+}
+
+.sankey-node text {
+    fill: #e6edf3;
+    font-size: 13px;
+    pointer-events: none;
+}
+
+.sankey-link {
+    fill: none;
+    stroke-opacity: 0.35;
+}
+
+.sankey-link:hover {
+    stroke-opacity: 0.75;
+}
+
+.chart-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(7, 11, 20, 0.95);
+    color: #e6edf3;
+    padding: 10px 14px;
+    border: 1px solid rgba(110, 193, 255, 0.35);
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 2000;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Glossary & Sources</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ROAD SAFETY AUSTRALIA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visualisations.html">Visuals</a></li>
+            <li><a href="sources.html" class="active">Glossary</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard-container" style="padding-top: 120px; max-width: 1200px; margin: 0 auto; padding-left: 40px; padding-right: 40px;">
+        
+        <header class="dashboard-intro" style="margin-bottom: 40px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 20px;">
+            <h1 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 10px;">Data Dictionary & Glossary</h1>
+            <p style="color: #8b949e; font-size: 1.1rem;">Official metadata reference appendix mapping variables and reporting parameters for the Australian Road Trauma dataset (2011–2021).</p>
+        </header>
+
+        <section style="margin-bottom: 60px;">
+            <table class="glossary-table">
+                <thead>
+                    <tr>
+                        <th>Data Field / Term</th>
+                        <th>Classification Type</th>
+                        <th>Technical Definition & Reporting Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hospitalisation</strong></td>
+                        <td>Core Metric Unit</td>
+                        <td>An injury event resulting in admission to an Australian hospital facility. This excludes records where the patient was pronounced deceased within 30 days of the crash incident.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Road User Type</strong></td>
+                        <td>Dimension Attribute</td>
+                        <td>The designated role of the injured entity at the time of impact. Key categories include: <em>Car Driver, Car Passenger, Motorcyclist, Pedal Cyclist,</em> and <em>Pedestrian</em>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Counterparty</strong></td>
+                        <td>Risk Variable</td>
+                        <td>The external object, environment, or collision partner involved in the crash vector (e.g., <em>Fixed or stationary object, Non-collision transport accident, Car, pick-up truck or van</em>).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ABS Remoteness Area</strong></td>
+                        <td>Geographic Boundary</td>
+                        <td>Regional classifications assigned using the Australian Bureau of Statistics remoteness structure, sorting profiles into <em>Major Cities, Regional,</em> or <em>Remote</em>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bed Days</strong></td>
+                        <td>Volume Metric</td>
+                        <td>The cumulative number of total midnight counts spent by a patient inside a hospital ward unit for an injury treatment cycle.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Died_cases</strong></td>
+                        <td>Fatality Marker</td>
+                        <td>Suppressed or historical attributes tracking cases where mortality outcomes occurred due to complex trauma complications.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section style="background: rgba(13, 20, 38, 0.4); border: 1px solid rgba(110, 193, 255, 0.1); border-radius: 12px; padding: 30px;">
+            <h3 style="color: #6ec1ff; margin-bottom: 15px; font-size: 1.3rem;">Dataset Provenance & Authority</h3>
+            <p style="color: #c9d1d9; margin-size: 1rem; line-height: 1.7; margin-bottom: 15px;">
+                The structural data driving this intelligence system is derived completely from the <strong>Australian Institute of Health and Welfare (AIHW) National Hospital Morbidity Database (NHMD)</strong>.
+            </p>
+            <blockquote style="border-left: 3px solid #6ec1ff; padding-left: 15px; color: #8b949e; font-style: italic;">
+                "Data compiles national hospital configurations capturing extensive clinical matrices, managed under administrative guidelines to monitor injury trends across state and territory networks."
+            </blockquote>
+        </section>
+
+    </main>
+
+</body>
+</html>

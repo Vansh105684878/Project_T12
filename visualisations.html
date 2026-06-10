@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Dashboard - Road Safety</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ROAD SAFETY GLOBAL</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visualisations.html" class="active">Visuals</a></li>
+            <li><a href="sources.html">Glossary</a></li> 
+            
+        </ul>
+    </nav>
+
+    <main class="dashboard-container" style="padding-top: 120px;">
+        <header class="dashboard-intro">
+            <h2>Analytical Workbench</h2>
+        </header>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>01 | Decadal Injury Trends</h3>
+                <div id="injury-line-chart" class="chart-display"></div>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>02 | Based on Age-Group and Sex</h3>
+                <div id="mode-bar-chart" class="chart-display"></div>
+            </div>
+            
+            <div class="chart-card">
+                <h3>03 Categorized Summary of Incidents</h3>
+                <div id="injury-lollipop-chart" class="chart-display"style= "display: block; position: relative;"></div>>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/line-charts.js"></script>
+    <script src="assets/js/bar-charts.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lollipop-charts.js"></script>
+
+</body>
+</html>
